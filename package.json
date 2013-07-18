@@ -1,6 +1,6 @@
 {
   "name": "passport-podio",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Podio authentication strategy for Passport.",
   "keywords": [
     "passport",
@@ -26,11 +26,11 @@
   "main": "./lib/passport-podio",
   "dependencies": {
     "pkginfo": "0.2.x",
-    "passport-oauth": "~0.0.1"
+    "passport-oauth": "~0.1.1"
   },
   "engines": {
     "node": ">= 0.4.0"
   },  
-  "_id": "passport-podio@0.0.1",
-  "_from": "passport-podio@>=0.0.1"
+  "_id": "passport-podio@0.0.2",
+  "_from": "passport-podio@>=0.0.2"
 }

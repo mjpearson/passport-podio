@@ -29,7 +29,7 @@ accepts these credentials and calls `done` providing a user, as well as
 
 #### Authenticate Requests
 
-Use `passport.authenticate()`, specifying the `'Podio'` strategy, to
+Use `passport.authorize()`, specifying the `'Podio'` strategy, to
 authenticate requests.
 
 For example, as route middleware in an [Express](http://expressjs.com/)
