@@ -18,8 +18,7 @@ accepts these credentials and calls `done` providing a user, as well as
 
     passport.use(new PodioStrategy({
         clientID: CLIENT_ID,
-        clientSecret: CLIENT_SECRET,
-        callbackURL: "http://127.0.0.1:3000/auth/podio/callback"
+        clientSecret: CLIENT_SECRET
       },
       function(accessToken, refreshToken, profile, done) {
         User.findOrCreate({ PodioId: profile.id }, function (err, user) {
@@ -37,18 +36,14 @@ For example, as route middleware in an [Express](http://expressjs.com/)
 application:
 
     app.get('/auth/podio',
-      passport.authenticate('podio'));
+      passport.authorize('podio'));
 
-    app.get('/auth/Podio/callback', 
-      passport.authenticate('podio', { failureRedirect: '/login' }),
+    app.get('/auth/podio/callback', 
+      passport.authorize('podio', { failureRedirect: '/login' }),
       function(req, res) {
         // Successful authentication, redirect home.
         res.redirect('/');
       });
-
-## Examples
-
-For a complete, working example, refer to the [login example](https://github.com/mjpearson/passport-podio/tree/master/examples/login).
 
 ## Thanks
 
