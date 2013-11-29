@@ -18,7 +18,8 @@ accepts these credentials and calls `done` providing a user, as well as
 
     passport.use(new PodioStrategy({
         clientID: CLIENT_ID,
-        clientSecret: CLIENT_SECRET
+        clientSecret: CLIENT_SECRET,
+        callbackURL : CALLBACK_URL
       },
       function(accessToken, refreshToken, profile, done) {
         User.findOrCreate({ PodioId: profile.id }, function (err, user) {
