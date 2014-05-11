@@ -1,6 +1,6 @@
 {
   "name": "passport-podio",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Podio authentication strategy for Passport.",
   "keywords": [
     "passport",
